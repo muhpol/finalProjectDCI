@@ -1,0 +1,67 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
+    font-family: 'Luckiest Guy', cursive;
+}
+h2 {
+    font-family: 'Special Elite', cursive;
+}
+
+#page {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+p {
+    
+}
+
+img {}
+
+nav a {
+    display:inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+nav a:hover {
+    background-color: aquamarine;
+}
+
+
+header nav {
+    position: sticky;
+    top: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    font-weight: bold;
+}
+
+nav ul li.active a {
+    box-shadow: 0px 5px 5px dimgray;
+} 
+
+address img, address span{
+    vertical-align: middle;
+}
+
+address span {
+    margin: 0 10px 0 0;
+}
+
+#portrait {
+    float: right;
+    max-width: 300px;
+}
