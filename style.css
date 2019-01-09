@@ -1,9 +1,10 @@
 body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    
 }
 
 h1 {
     font-family: 'Luckiest Guy', cursive;
+    font-size: 3em;
 }
 h2 {
     font-family: 'Special Elite', cursive;
@@ -18,21 +19,48 @@ p {
     
 }
 
-img {}
+img {
+
+}
 
 nav a {
-    display:inline-block;
+    display: inline-block;
+    font-family: 'Ubuntu', sans-serif;
     text-transform: uppercase;
     text-decoration: none;
     border: 1px solid black;
     border-radius: 10px;
+    box-shadow: 0 5px 10px dimgray;
     padding: 5px;
+    transition: 2s;
+    position: relative;
+    top: -5px;
+    color: black;
 }
 
 nav a:hover {
     background-color: aquamarine;
+    transition: .5s;
+    top: 0px;
+    box-shadow: 0 5px 10px turquoise;
 }
 
+nav a:active {
+    background-color: yellow;
+    transition: .5s;
+    top: 5px;
+    box-shadow: 0 0px 0px turquoise;
+}
+
+nav a:visited {
+    
+}
+
+nav ul li.active a {
+    box-shadow: 0px 0px 0px dimgray;
+    background-color: chartreuse; 
+    top: 5px; 
+} 
 
 header nav {
     position: sticky;
@@ -47,11 +75,8 @@ nav ul {
 nav ul li {
     display: inline-block;
     font-weight: bold;
+    margin: 0 5px 0 0;
 }
-
-nav ul li.active a {
-    box-shadow: 0px 5px 5px dimgray;
-} 
 
 address img, address span{
     vertical-align: middle;
