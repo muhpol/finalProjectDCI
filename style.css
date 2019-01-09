@@ -4,8 +4,30 @@ body {
 
 h1 {
     font-family: 'Luckiest Guy', cursive;
-    font-size: 3em;
+    font-size: 3em;  
+    text-shadow: 5px 5px 5px #ddd;   
 }
+
+h1 b {
+    transition: 1s;
+}
+h1 b:hover {
+    transition: .5s;
+    font-size: 120%;
+}
+h1 b:hover:nth-child(1) {
+    color: red;
+}
+h1 b:hover:nth-child(2) {
+    color: lime;
+}
+h1 b:hover:nth-child(3) {
+    color: blue;
+}
+h1 b:hover:last-child {
+    color: crimson;
+}
+
 h2 {
     font-family: 'Special Elite', cursive;
 }
@@ -19,13 +41,22 @@ p {
     
 }
 
-img {
+#photo {
+    min-width: 100px;
+    max-width: 300px;
+    background-image: url(img/No_portrait_blanko.svg);
+}
 
+#photo img {
+    display: block;
+    width: 100%;
+    opacity: 0;
 }
 
 nav a {
     display: inline-block;
     font-family: 'Ubuntu', sans-serif;
+    font-size: 90%;
     text-transform: uppercase;
     text-decoration: none;
     border: 1px solid black;
@@ -39,17 +70,19 @@ nav a {
 }
 
 nav a:hover {
-    background-color: aquamarine;
+    font-size: 100%;
+    background-color: yellow;
     transition: .5s;
     top: 0px;
-    box-shadow: 0 5px 10px turquoise;
+    box-shadow: 0 5px 10px yellowgreen;
 }
 
 nav a:active {
-    background-color: yellow;
+    font-size: 100%;
+    background-color: orange;
     transition: .5s;
     top: 5px;
-    box-shadow: 0 0px 0px turquoise;
+    box-shadow: 0 0px 0px orangered;
 }
 
 nav a:visited {
@@ -57,7 +90,8 @@ nav a:visited {
 }
 
 nav ul li.active a {
-    box-shadow: 0px 0px 0px dimgray;
+    font-size: 100%;
+    box-shadow: 0px 1px 1px dimgray;
     background-color: chartreuse; 
     top: 5px; 
 } 
