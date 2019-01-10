@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu|Gidugu|East+Sea+Dokdo|Luckiest+Guy|Special+Elite" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <title>Contact - DCI FinalProject - MP</title>
+</head>
+
+<body>
+    <div id="page">
+
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">About me</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li class="active"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h1><b>M</b><b>a</b><b>x</b> <b>Mustermann</b></h1>
+
+            <div id="photo">
+                <div id="photo2">
+                    <img src="img/j_barnes.png" alt="portrait" id="portrait">
+                </div>
+            </div>
+
+            <h2><span>Who am i</span></h2>
+            <p>Contact me if you have any questions!</p>
+
+            <form action="mailto:emailaddress@email.com?subject=finalProjectDCI&body=YourMessage">
+                <label for="name">
+                    <h3>Name: </h3>
+                    <input type="text" id="name" name="name" placeholder="Name Lastname" required="required">
+                </label>
+
+                <label for="tel">
+                    <h3>Telephone number: </h3>
+                    <input type="tel" id="tel" name="tel" placeholder="+49 (40) 123 45 67">
+                </label>
+
+                <label for="email">
+                    <h3>Email: </h3>
+                    <input type="email" id="email" name="email" placeholder="name.lastname@hoster.de" required="required">
+                </label>
+
+                <label for="birthday">
+                    <h3>Birthday: </h3>
+                    <input type="date" id="birthday" name="birthday">
+                </label>
+
+                <h3>Which skills you need?: </h3>
+                <label for="html">
+                    <span>HTML</span>
+                    <input type="checkbox" name="html" id="html">
+                </label>
+                <label for="css">
+                    <span>CSS</span>
+                    <input type="checkbox" name="css" id="css">
+                </label>
+                <label for="js">
+                    <span>JS</span>
+                    <input type="checkbox" name="js" id="js">
+                </label>
+
+                <label for="pay">
+                    <h3>What will you pay?: </h3>
+                    <img id="face" src="img/frown.svg" alt="" style="vertical-align: middle">
+                    <input type="range" id="pay" name="pay" min="0" max="1000000" step="1000" style="vertical-align: middle"
+                        value="0">
+                    <span id="money"></span> $
+                </label>
+
+                <script>
+                    var slider = document.getElementById("pay");
+                    var output = document.getElementById("money");
+                    var face = document.getElementById("face");
+                    output.innerHTML = slider.value;
+
+                    slider.oninput = function () {
+                        output.innerHTML = this.value;
+                        if (slider.value < 250000) face.src = 'img/frown.svg';
+                        else if (slider.value > 250000 && slider.value < 750000) face.src = 'img/meh.svg';
+                        else if (slider.value > 750000) face.src = 'img/smile.svg';
+                    }
+                </script>
+
+
+                <h3>How will you pay?: </h3>
+                <label for="cash">
+                    <span>Cash</span>
+                    <input type="radio" name="paymethod" id="cash">
+                </label>
+                <label for="paypal">
+                    <span>PayPal</span>
+                    <input type="radio" name="paymethod" id="paypal">
+                </label>
+                <label for="transfer">
+                    <span>Transfer</span>
+                    <input type="radio" name="paymethod" id="transfer">
+                </label>
+
+
+                <label for="source">
+                    <h3>Where did you know about me?: </h3>
+                    <select name="source" id="source">
+                        <option value="DCI">DCI</option>
+                        <option value="Internet">Internet</option>
+                        <option value="Friends">Friends</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </label>
+
+                <label for="message">
+                    <h3>Message: </h3>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Write your message here"
+                        required="required"></textarea>
+                </label>
+
+                <input type="image" src="img/send.svg" name="Send">
+
+
+            </form>
+
+        </main>
+
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="imprint.html">Imprint</a></li>
+                </ul>
+            </nav>
+            <address>
+                <img src="img/at-sign.svg" alt="email address"> <span class="email">max.mustermann@email.de</span>
+                <img src="img/phone.svg" alt="phone number"> <span class="phone">+49 (40) 123 45 67</span>
+                <img src="img/mail.svg" alt="address"> <span class="mail">Musterstr. 1, 22123 Hamburg</span>
+            </address>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

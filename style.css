@@ -11,6 +11,7 @@ h1 {
 h1 b {
     transition: 1s;
 }
+
 h1 b:hover {
     transition: .5s;
     font-size: 120%;
@@ -30,6 +31,16 @@ h1 b:hover:last-child {
 
 h2 {
     font-family: 'Special Elite', cursive;
+    text-shadow: 0 10px 10px #bbb;
+}
+h2 {
+    transition: 1s;
+}
+h2:hover {
+    transition: .5s;
+    transform: rotateX(180deg);
+    /* transform: rotate3d(1, 1, 1, 180deg); */
+    text-shadow: 0 -10px 10px blue; 
 }
 
 #page {
@@ -42,9 +53,25 @@ p {
 }
 
 #photo {
+    float: right;
+}
+
+#photo, #photo2 {
     min-width: 100px;
     max-width: 300px;
+    background-image: url(img/j_barnes.png);
+    background-size: cover;
+}
+#photo2 {
     background-image: url(img/No_portrait_blanko.svg);
+    background-color: #fff;
+    transition: 2s;
+}
+
+#photo2:hover {
+    cursor: zoom-in;
+    opacity: 0;
+    transition: 1s;
 }
 
 #photo img {
@@ -74,7 +101,8 @@ nav a:hover {
     background-color: yellow;
     transition: .5s;
     top: 0px;
-    box-shadow: 0 5px 10px yellowgreen;
+    box-shadow: 0 5px 10px #9acd32;
+    /* transform: rotate3d(1, 1, 1, 360deg); */
 }
 
 nav a:active {
@@ -120,7 +148,19 @@ address span {
     margin: 0 10px 0 0;
 }
 
-#portrait {
-    float: right;
-    max-width: 300px;
+table {
+    width: 100%;
 }
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table th, table td {
+    text-align: left;
+}
+
+table th {
+    background-color: #af4c4c;
+    color: white;
+  }
